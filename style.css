@@ -679,6 +679,38 @@ h3 {
   display: block;
 }
 
+.profit__node-group {
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+  transform: scale(0.4);
+  transition: opacity 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.profit__node-group.is-visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.profit__lead-glow,
+.profit__lead-dot {
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+@keyframes nodePing {
+  0%   { transform: scale(1); opacity: 0.22; }
+  60%  { transform: scale(1.9); opacity: 0; }
+  100% { transform: scale(1.9); opacity: 0; }
+}
+
+.profit__node-group.is-visible .node-ping {
+  animation: nodePing 2.4s ease-out infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
 /* Mobile */
 @media (max-width: 768px) {
   .profit {

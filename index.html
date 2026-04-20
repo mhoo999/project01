@@ -128,46 +128,83 @@
     <div class="profit__silhouette">
       <img src="images/pc/silhouette2.png" alt="">
     </div>
-    <svg class="profit__graph" viewBox="0 0 1440 600" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMaxYMax slice">
+    <svg class="profit__graph" viewBox="0 0 1440 600" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
       <defs>
         <clipPath id="graphReveal">
-          <rect class="profit__graph-clip" x="0" y="0" width="0" height="600"/>
+          <rect class="profit__graph-clip" x="0" y="0" width="0" height="620"/>
         </clipPath>
         <linearGradient id="graphFill" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="#5B8BF5" stop-opacity="0.95"/>
-          <stop offset="100%" stop-color="#2E5BDB" stop-opacity="0.85"/>
+          <stop offset="0%" stop-color="#3B6EF8" stop-opacity="0.62"/>
+          <stop offset="55%" stop-color="#4B7BF6" stop-opacity="0.42"/>
+          <stop offset="100%" stop-color="#5B8BF5" stop-opacity="0.18"/>
         </linearGradient>
-        <filter id="nodeGlow">
-          <feGaussianBlur stdDeviation="4" result="blur"/>
+        <filter id="nodeGlow" x="-80%" y="-80%" width="260%" height="260%">
+          <feGaussianBlur stdDeviation="7" result="blur"/>
+          <feMerge>
+            <feMergeNode in="blur"/>
+            <feMergeNode in="SourceGraphic"/>
+          </feMerge>
+        </filter>
+        <filter id="leadGlow" x="-150%" y="-150%" width="400%" height="400%">
+          <feGaussianBlur stdDeviation="12" result="blur"/>
           <feMerge>
             <feMergeNode in="blur"/>
             <feMergeNode in="SourceGraphic"/>
           </feMerge>
         </filter>
       </defs>
+
+      <!-- 클립된 영역: 채움 + 그리드 + 라인 -->
       <g clip-path="url(#graphReveal)">
-        <!-- 채움 면 (곡선 우상향) -->
-        <path d="M0,600 L0,480 C120,475 200,440 340,380 C480,320 520,290 660,240 C800,190 840,155 960,120 C1080,85 1140,55 1320,35 L1440,30 L1440,600 Z" fill="url(#graphFill)"/>
-        <!-- 곡선 라인 -->
-        <path d="M0,480 C120,475 200,440 340,380 C480,320 520,290 660,240 C800,190 840,155 960,120 C1080,85 1140,55 1320,35 L1440,30" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="2.5"/>
-        <!-- 수직 가이드 -->
-        <line x1="200" y1="452" x2="200" y2="600" stroke="rgba(255,255,255,0.12)" stroke-width="1" stroke-dasharray="4 3"/>
-        <line x1="480" y1="335" x2="480" y2="600" stroke="rgba(255,255,255,0.12)" stroke-width="1" stroke-dasharray="4 3"/>
-        <line x1="760" y1="210" x2="760" y2="600" stroke="rgba(255,255,255,0.12)" stroke-width="1" stroke-dasharray="4 3"/>
-        <line x1="1040" y1="100" x2="1040" y2="600" stroke="rgba(255,255,255,0.12)" stroke-width="1" stroke-dasharray="4 3"/>
-        <line x1="1320" y1="35" x2="1320" y2="600" stroke="rgba(255,255,255,0.12)" stroke-width="1" stroke-dasharray="4 3"/>
-        <!-- 노드 글로우 -->
-        <circle cx="200" cy="452" r="16" fill="rgba(91,139,245,0.25)" filter="url(#nodeGlow)"/>
-        <circle cx="480" cy="335" r="16" fill="rgba(91,139,245,0.25)" filter="url(#nodeGlow)"/>
-        <circle cx="760" cy="210" r="16" fill="rgba(91,139,245,0.25)" filter="url(#nodeGlow)"/>
-        <circle cx="1040" cy="100" r="16" fill="rgba(91,139,245,0.25)" filter="url(#nodeGlow)"/>
-        <circle cx="1320" cy="35" r="16" fill="rgba(91,139,245,0.25)" filter="url(#nodeGlow)"/>
-        <!-- 노드 -->
-        <circle cx="200" cy="452" r="7" fill="#fff" stroke="#5B8BF5" stroke-width="3"/>
-        <circle cx="480" cy="335" r="7" fill="#fff" stroke="#5B8BF5" stroke-width="3"/>
-        <circle cx="760" cy="210" r="7" fill="#fff" stroke="#5B8BF5" stroke-width="3"/>
-        <circle cx="1040" cy="100" r="7" fill="#fff" stroke="#5B8BF5" stroke-width="3"/>
-        <circle cx="1320" cy="35" r="7" fill="#fff" stroke="#5B8BF5" stroke-width="3"/>
+        <path d="M0,620 L0,540 C60,538 140,500 220,485 C300,470 380,390 480,375 C570,362 650,258 740,245 C830,232 910,128 1000,118 C1090,108 1160,58 1260,55 L1440,45 L1440,620 Z" fill="url(#graphFill)"/>
+        <line x1="0" y1="490" x2="1440" y2="490" stroke="rgba(255,255,255,0.07)" stroke-width="1" stroke-dasharray="6 5"/>
+        <line x1="0" y1="375" x2="1440" y2="375" stroke="rgba(255,255,255,0.07)" stroke-width="1" stroke-dasharray="6 5"/>
+        <line x1="0" y1="250" x2="1440" y2="250" stroke="rgba(255,255,255,0.07)" stroke-width="1" stroke-dasharray="6 5"/>
+        <line x1="0" y1="125" x2="1440" y2="125" stroke="rgba(255,255,255,0.07)" stroke-width="1" stroke-dasharray="6 5"/>
+        <path class="profit__graph-line"
+          d="M0,540 C60,538 140,500 220,485 C300,470 380,390 480,375 C570,362 650,258 740,245 C830,232 910,128 1000,118 C1090,108 1160,58 1260,55 L1440,45"
+          fill="none" stroke="rgba(255,255,255,0.8)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+
+      <!-- 리딩 글로우 도트 (클립 밖) -->
+      <circle class="profit__lead-glow" cx="-100" cy="-100" r="20" fill="rgba(180,210,255,0.55)" filter="url(#leadGlow)"/>
+      <circle class="profit__lead-dot" cx="-100" cy="-100" r="5" fill="#fff"/>
+
+      <!-- 노드 그룹 (클립 밖, JS로 순차 등장) -->
+      <g class="profit__node-group" data-x="220" data-y="485">
+        <line x1="220" y1="485" x2="220" y2="620" stroke="rgba(255,255,255,0.2)" stroke-width="1" stroke-dasharray="4 4"/>
+        <circle class="node-ping" cx="220" cy="485" r="7.5" fill="rgba(91,139,245,0.35)"/>
+        <circle cx="220" cy="485" r="24" fill="rgba(59,110,248,0.18)" filter="url(#nodeGlow)"/>
+        <circle cx="220" cy="485" r="7.5" fill="#fff" stroke="#5B8BF5" stroke-width="2.5"/>
+        <text x="220" y="462" text-anchor="middle" fill="rgba(255,255,255,0.95)" font-size="12" font-family="Pretendard,sans-serif" font-weight="700" letter-spacing="0.5">1년차</text>
+      </g>
+      <g class="profit__node-group" data-x="480" data-y="375">
+        <line x1="480" y1="375" x2="480" y2="620" stroke="rgba(255,255,255,0.2)" stroke-width="1" stroke-dasharray="4 4"/>
+        <circle class="node-ping" cx="480" cy="375" r="7.5" fill="rgba(91,139,245,0.35)"/>
+        <circle cx="480" cy="375" r="24" fill="rgba(59,110,248,0.18)" filter="url(#nodeGlow)"/>
+        <circle cx="480" cy="375" r="7.5" fill="#fff" stroke="#5B8BF5" stroke-width="2.5"/>
+        <text x="480" y="352" text-anchor="middle" fill="rgba(255,255,255,0.95)" font-size="12" font-family="Pretendard,sans-serif" font-weight="700" letter-spacing="0.5">2년차</text>
+      </g>
+      <g class="profit__node-group" data-x="740" data-y="245">
+        <line x1="740" y1="245" x2="740" y2="620" stroke="rgba(255,255,255,0.2)" stroke-width="1" stroke-dasharray="4 4"/>
+        <circle class="node-ping" cx="740" cy="245" r="7.5" fill="rgba(91,139,245,0.35)"/>
+        <circle cx="740" cy="245" r="24" fill="rgba(59,110,248,0.18)" filter="url(#nodeGlow)"/>
+        <circle cx="740" cy="245" r="7.5" fill="#fff" stroke="#5B8BF5" stroke-width="2.5"/>
+        <text x="740" y="222" text-anchor="middle" fill="rgba(255,255,255,0.95)" font-size="12" font-family="Pretendard,sans-serif" font-weight="700" letter-spacing="0.5">3년차</text>
+      </g>
+      <g class="profit__node-group" data-x="1000" data-y="118">
+        <line x1="1000" y1="118" x2="1000" y2="620" stroke="rgba(255,255,255,0.2)" stroke-width="1" stroke-dasharray="4 4"/>
+        <circle class="node-ping" cx="1000" cy="118" r="7.5" fill="rgba(91,139,245,0.35)"/>
+        <circle cx="1000" cy="118" r="24" fill="rgba(59,110,248,0.18)" filter="url(#nodeGlow)"/>
+        <circle cx="1000" cy="118" r="7.5" fill="#fff" stroke="#5B8BF5" stroke-width="2.5"/>
+        <text x="1000" y="95" text-anchor="middle" fill="rgba(255,255,255,0.95)" font-size="12" font-family="Pretendard,sans-serif" font-weight="700" letter-spacing="0.5">4년차</text>
+      </g>
+      <g class="profit__node-group" data-x="1260" data-y="55">
+        <line x1="1260" y1="55" x2="1260" y2="620" stroke="rgba(255,255,255,0.2)" stroke-width="1" stroke-dasharray="4 4"/>
+        <circle class="node-ping" cx="1260" cy="55" r="7.5" fill="rgba(91,139,245,0.35)"/>
+        <circle cx="1260" cy="55" r="24" fill="rgba(59,110,248,0.18)" filter="url(#nodeGlow)"/>
+        <circle cx="1260" cy="55" r="7.5" fill="#fff" stroke="#5B8BF5" stroke-width="2.5"/>
+        <text x="1260" y="32" text-anchor="middle" fill="rgba(255,255,255,0.95)" font-size="12" font-family="Pretendard,sans-serif" font-weight="700" letter-spacing="0.5">5년차</text>
       </g>
     </svg>
   </section>
