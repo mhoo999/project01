@@ -1,4 +1,5 @@
 (function () {
+  const viewport = document.querySelector('.slider-viewport');
   const track = document.querySelector('.slider-track');
   const progressBar = document.querySelector('.slider-progress__bar');
   const prevBtn = document.querySelector('.slider-btn--prev');
@@ -8,7 +9,6 @@
   const total = originalSlides.length;
 
   const isMobile = () => window.innerWidth <= 768;
-  const visibleCount = () => isMobile() ? 1 : 2;
 
   // 앞뒤 클론 추가
   originalSlides.forEach(slide => {
@@ -20,10 +20,15 @@
   let isTransitioning = false;
 
   function getGap() {
-    return isMobile() ? 12 : 20;
+    return isMobile() ? 0 : 20;
   }
 
   function getSlideWidth() {
+    if (isMobile()) {
+      // 모바일: viewport 너비와 정확히 일치
+      return viewport.offsetWidth;
+    }
+    // PC: 슬라이드 실제 너비 + gap
     return track.querySelectorAll('.slide')[0].offsetWidth + getGap();
   }
 
@@ -54,7 +59,6 @@
   }
 
   track.addEventListener('transitionend', () => {
-    // 끝 클론에서 원본으로 점프
     if (current >= total * 2) {
       current = total;
       moveTo(current, false);

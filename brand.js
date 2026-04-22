@@ -2,7 +2,7 @@
   const track = document.querySelector('.brand__capsule-track');
   if (!track) return;
 
-  const originals = Array.from(track.children);
+  const originals = Array.from(track.querySelectorAll('.capsule-item'));
   const gap = 48;
   const speed = 0.6; // px per frame (낮을수록 느림)
 
