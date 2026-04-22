@@ -128,66 +128,102 @@
   </section>
 
   <section class="profit">
+    <div class="profit__watermark" aria-hidden="true">GAMEGA</div>
     <div class="profit__content">
       <h2 class="profit__title">막강한 브랜드 파워로<br><span>높은 영업이익</span></h2>
-      <p class="profit__desc">브랜드 경쟁력과 운영 노하우를 바탕으로 초기 투자 이후에도<br>안정적으로 매출이 이어지는 수익 구조를 갖추고 있습니다.<br>효율적인 비용 관리와 검증된 운영 프로세스를 통해 높은 영업이익을 확보합니다.</p>
+      <p class="profit__desc">브랜드 경쟁력과 운영 노하우를 바탕으로 초기 투자 이후에도<br>안정적으로 매출이 이어지는 수익 구조를 갖추고 있습니다.<br>효율적인 비용 관리와 검증된 운영
+        프로세스를 통해 높은 영업이익을 확보합니다.</p>
     </div>
     <div class="profit__app-box">
       <img src="images/pc/app.jpg" alt="앱 이미지">
     </div>
+    <div class="profit__logo-label" aria-hidden="true">로고</div>
+    <div class="profit__connector" aria-hidden="true">
+      <span class="profit__connector-line"></span>
+      <span class="profit__connector-dot"></span>
+    </div>
     <div class="profit__silhouette">
       <img src="images/pc/silhouette2.png" alt="">
     </div>
-    <svg class="profit__graph" viewBox="0 0 1440 600" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMaxYMax slice">
+    <svg class="profit__graph" viewBox="0 0 1440 620" xmlns="http://www.w3.org/2000/svg"
+      preserveAspectRatio="xMaxYMax slice">
       <defs>
         <clipPath id="graphReveal">
-          <rect class="profit__graph-clip" x="0" y="0" width="0" height="600"/>
+          <rect class="profit__graph-clip" x="0" y="0" width="0" height="620" />
         </clipPath>
-        <linearGradient id="graphFill" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="#5B8BF5" stop-opacity="0.95"/>
-          <stop offset="100%" stop-color="#2E5BDB" stop-opacity="0.85"/>
+        <linearGradient id="graphFill" x1="0" y1="1" x2="0" y2="0">
+          <stop offset="0%" stop-color="#1a3a8f" stop-opacity="1" />
+          <stop offset="60%" stop-color="#3B6EF8" stop-opacity="1" />
+          <stop offset="100%" stop-color="#5B8BF5" stop-opacity="0.95" />
         </linearGradient>
         <filter id="nodeGlow">
-          <feGaussianBlur stdDeviation="4" result="blur"/>
+          <feGaussianBlur stdDeviation="4" result="blur" />
           <feMerge>
-            <feMergeNode in="blur"/>
-            <feMergeNode in="SourceGraphic"/>
+            <feMergeNode in="blur" />
+            <feMergeNode in="SourceGraphic" />
           </feMerge>
         </filter>
       </defs>
       <g clip-path="url(#graphReveal)">
-        <!-- 채움 면 (곡선 우상향) -->
-        <path d="M0,600 L0,480 C120,475 200,440 340,380 C480,320 520,290 660,240 C800,190 840,155 960,120 C1080,85 1140,55 1320,35 L1440,30 L1440,600 Z" fill="url(#graphFill)"/>
-        <!-- 곡선 라인 -->
-        <path d="M0,480 C120,475 200,440 340,380 C480,320 520,290 660,240 C800,190 840,155 960,120 C1080,85 1140,55 1320,35 L1440,30" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="2.5"/>
-        <!-- 수직 가이드 -->
-        <line x1="200" y1="452" x2="200" y2="600" stroke="rgba(255,255,255,0.12)" stroke-width="1" stroke-dasharray="4 3"/>
-        <line x1="480" y1="335" x2="480" y2="600" stroke="rgba(255,255,255,0.12)" stroke-width="1" stroke-dasharray="4 3"/>
-        <line x1="760" y1="210" x2="760" y2="600" stroke="rgba(255,255,255,0.12)" stroke-width="1" stroke-dasharray="4 3"/>
-        <line x1="1040" y1="100" x2="1040" y2="600" stroke="rgba(255,255,255,0.12)" stroke-width="1" stroke-dasharray="4 3"/>
-        <line x1="1320" y1="35" x2="1320" y2="600" stroke="rgba(255,255,255,0.12)" stroke-width="1" stroke-dasharray="4 3"/>
-        <!-- 노드 글로우 -->
-        <circle cx="200" cy="452" r="16" fill="rgba(91,139,245,0.25)" filter="url(#nodeGlow)"/>
-        <circle cx="480" cy="335" r="16" fill="rgba(91,139,245,0.25)" filter="url(#nodeGlow)"/>
-        <circle cx="760" cy="210" r="16" fill="rgba(91,139,245,0.25)" filter="url(#nodeGlow)"/>
-        <circle cx="1040" cy="100" r="16" fill="rgba(91,139,245,0.25)" filter="url(#nodeGlow)"/>
-        <circle cx="1320" cy="35" r="16" fill="rgba(91,139,245,0.25)" filter="url(#nodeGlow)"/>
-        <!-- 노드 -->
-        <circle cx="200" cy="452" r="7" fill="#fff" stroke="#5B8BF5" stroke-width="3"/>
-        <circle cx="480" cy="335" r="7" fill="#fff" stroke="#5B8BF5" stroke-width="3"/>
-        <circle cx="760" cy="210" r="7" fill="#fff" stroke="#5B8BF5" stroke-width="3"/>
-        <circle cx="1040" cy="100" r="7" fill="#fff" stroke="#5B8BF5" stroke-width="3"/>
-        <circle cx="1320" cy="35" r="7" fill="#fff" stroke="#5B8BF5" stroke-width="3"/>
+        <path d="M0,620 L0,560 C360,540 720,440 1080,260 C1260,170 1380,120 1440,80 L1440,620 Z"
+          fill="url(#graphFill)" />
+        <path d="M0,560 C360,540 720,440 1080,260 C1260,170 1380,120 1440,80" fill="none"
+          stroke="rgba(255,255,255,0.45)" stroke-width="2.5" stroke-linejoin="round" />
+        <line x1="360" y1="500" x2="360" y2="620" stroke="rgba(255,255,255,0.14)" stroke-width="1"
+          stroke-dasharray="4 4" />
+        <line x1="720" y1="380" x2="720" y2="620" stroke="rgba(255,255,255,0.14)" stroke-width="1"
+          stroke-dasharray="4 4" />
+        <line x1="1080" y1="220" x2="1080" y2="620" stroke="rgba(255,255,255,0.14)" stroke-width="1"
+          stroke-dasharray="4 4" />
+        <line x1="1260" y1="150" x2="1260" y2="620" stroke="rgba(255,255,255,0.14)" stroke-width="1"
+          stroke-dasharray="4 4" />
+        <circle cx="360" cy="515" r="16" fill="rgba(91,139,245,0.25)" filter="url(#nodeGlow)" />
+        <circle cx="720" cy="415" r="16" fill="rgba(91,139,245,0.25)" filter="url(#nodeGlow)" />
+        <circle cx="1080" cy="260" r="16" fill="rgba(91,139,245,0.25)" filter="url(#nodeGlow)" />
+        <circle cx="1260" cy="175" r="16" fill="rgba(91,139,245,0.25)" filter="url(#nodeGlow)" />
+        <circle cx="360" cy="515" r="7" fill="#fff" stroke="#5B8BF5" stroke-width="3" />
+        <circle cx="720" cy="415" r="7" fill="#fff" stroke="#5B8BF5" stroke-width="3" />
+        <circle cx="1080" cy="260" r="7" fill="#fff" stroke="#5B8BF5" stroke-width="3" />
+        <circle cx="1260" cy="175" r="7" fill="#fff" stroke="#5B8BF5" stroke-width="3" />
       </g>
     </svg>
   </section>
 
   <div class="expand-wrapper">
     <section class="expand">
-      <video class="expand__video" autoplay muted loop playsinline>
-        <source src="videos/expand.mp4" type="video/mp4">
-      </video>
-      <div class="expand__dim"></div>
+      <img class="expand__map" src="images/pc/world_map.png" alt="" aria-hidden="true">
+
+      <div class="expand__panels">
+        <div class="expand__left">
+          <h2 class="expand__title">
+            대한민국을 넘어,<br>
+            <span>아시아로<br>확장하는 챔피언</span>
+          </h2>
+          <img class="expand__flag" src="images/pc/expand_left.png" alt="대한민국 국기">
+        </div>
+        <div class="expand__right">
+          <ul class="expand__countries">
+            <li><img src="images/pc/flag_01.png" alt="베트남 국기">베트남</li>
+            <li><img src="images/pc/flag_02.png" alt="몽골 국기">몽골</li>
+            <li><img src="images/pc/flag_03.png" alt="인도네시아 국기">인도네시아</li>
+            <li><img src="images/pc/flag_04.png" alt="캄보디아 국기">캄보디아</li>
+            <li><img src="images/pc/flag_05.png" alt="태국 국기">태국</li>
+          </ul>
+          <p class="expand__desc">
+            5개국에 진출하며 국내를 넘어<br>
+            해외 시장에서도<br>
+            경쟁력을 입증하고 있습니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="expand__pill">
+        <video class="expand__video" autoplay muted loop playsinline>
+          <source src="videos/expand.mp4" type="video/mp4">
+        </video>
+        <div class="expand__dim"></div>
+      </div>
+
       <div class="expand__text-mask">
         <p class="expand__video-text">
           글로벌 확장을 통해<br>
@@ -195,106 +231,107 @@
           지속적으로 확대해 나가고 있습니다.
         </p>
       </div>
-      <div class="expand__overlay"></div>
-      <div class="expand__panels">
-      <div class="expand__left">
-        <h2 class="expand__title">
-          대한민국을 넘어,<br>
-          <span>아시아로<br>확장하는 챔피언</span>
-        </h2>
-        <img class="expand__img" src="images/pc/expand_left.png" alt="">
-      </div>
-      <div class="expand__right">
-        <ul class="expand__countries">
-          <li><img src="images/pc/flag_01.png" alt="베트남 국기">베트남</li>
-          <li><img src="images/pc/flag_02.png" alt="몽골 국기">몽골</li>
-          <li><img src="images/pc/flag_03.png" alt="인도네시아 국기">인도네시아</li>
-          <li><img src="images/pc/flag_04.png" alt="캄보디아 국기">캄보디아</li>
-          <li><img src="images/pc/flag_05.png" alt="태국 국기">태국</li>
-        </ul>
-        <p class="expand__desc">
-          5개국에 진출하여 국내를 넘어<br>
-          해외 시장에서도<br>
-          경쟁력을 입증하고 있습니다.
-        </p>
-      </div>
-      </div><!-- /.expand__panels -->
     </section>
   </div>
 
   <section class="guide">
     <div class="guide__inner">
-      <span class="guide__label">FRANCHISE GUIDE</span>
-      <h2 class="guide__title">성공적인 창업을 위한 <span>창업 가이드</span></h2>
+      <h2 class="guide__title">성공적인 창업을 위한 창업 가이드</h2>
       <div class="guide__grid">
 
         <!-- Row 1 -->
         <div class="guide__card" data-index="1">
-          <span class="guide__card-num">01</span>
+          <span class="guide__card-num">1</span>
           <h3 class="guide__card-title">가맹상담</h3>
           <p class="guide__card-desc">투자 및 운영 프로세스 상세 소개</p>
-          <ul class="guide__card-tags"><li>홈페이지</li><li>전화</li><li>본사방문</li></ul>
+          <ul class="guide__card-tags">
+            <li>홈페이지</li>
+            <li>전화</li>
+            <li>본사방문</li>
+          </ul>
         </div>
         <div class="guide__arrow guide__arrow--h" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+            stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6" />
+          </svg>
         </div>
         <div class="guide__card" data-index="2">
-          <span class="guide__card-num">02</span>
+          <span class="guide__card-num">2</span>
           <h3 class="guide__card-title">상권 분석 컨설팅</h3>
           <p class="guide__card-desc">빅데이터로 철저히 검증된 점포 선정</p>
-          <ul class="guide__card-tags"><li>입지분석</li><li>시장분석</li></ul>
+          <ul class="guide__card-tags">
+            <li>입지분석</li>
+            <li>시장분석</li>
+          </ul>
         </div>
         <div class="guide__arrow guide__arrow--h" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+            stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6" />
+          </svg>
         </div>
         <div class="guide__card" data-index="3">
-          <span class="guide__card-num">03</span>
+          <span class="guide__card-num">3</span>
           <h3 class="guide__card-title">가맹 계약 체결</h3>
           <p class="guide__card-desc">점포에 대한 임대차 계약 및 창업 가맹 계약 체결</p>
         </div>
 
         <!-- Row 2 -->
         <div class="guide__card" data-index="4">
-          <span class="guide__card-num">04</span>
+          <span class="guide__card-num">4</span>
           <h3 class="guide__card-title">공간 디자인&amp;설계</h3>
           <p class="guide__card-desc">상권 분석 결과에 맞춘 차별화된 컨텐츠 도입 및 공간 디자인</p>
         </div>
         <div class="guide__arrow guide__arrow--h" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+            stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6" />
+          </svg>
         </div>
         <div class="guide__card" data-index="5">
-          <span class="guide__card-num">05</span>
+          <span class="guide__card-num">5</span>
           <h3 class="guide__card-title">인테리어 계약&amp;공사</h3>
           <p class="guide__card-desc">공사도급계약 체결 및 투명한 공정 기반의 효율적인 공사</p>
         </div>
         <div class="guide__arrow guide__arrow--h" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+            stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6" />
+          </svg>
         </div>
         <div class="guide__card" data-index="6">
-          <span class="guide__card-num">06</span>
+          <span class="guide__card-num">6</span>
           <h3 class="guide__card-title">가맹점주 운영 교육</h3>
           <p class="guide__card-desc">이론 및 실습 교육 (CS교육, 놀이 컨텐츠 운영방안, 매장운영 노하우 전수)</p>
         </div>
 
         <!-- Row 3 -->
         <div class="guide__card" data-index="7">
-          <span class="guide__card-num">07</span>
+          <span class="guide__card-num">7</span>
           <h3 class="guide__card-title">물품 공급</h3>
           <p class="guide__card-desc">초도 물품 세팅, 오픈 전 현장 점검</p>
         </div>
         <div class="guide__arrow guide__arrow--h" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+            stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6" />
+          </svg>
         </div>
         <div class="guide__card" data-index="8">
-          <span class="guide__card-num">08</span>
+          <span class="guide__card-num">8</span>
           <h3 class="guide__card-title">홍보/마케팅</h3>
           <p class="guide__card-desc">오픈 홍보 이벤트 진행 및 다채로운 채널을 통한 광고/홍보</p>
         </div>
         <div class="guide__arrow guide__arrow--h" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+            stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6" />
+          </svg>
         </div>
         <div class="guide__card guide__card--open" data-index="9">
-          <span class="guide__card-num">09</span>
+          <span class="guide__card-deco" aria-hidden="true">🎉</span>
+          <span class="guide__card-num">9</span>
           <h3 class="guide__card-title">오픈</h3>
           <p class="guide__card-desc">안정적인 운영 방법에 대한 지속적인 관리 및 교육</p>
         </div>
@@ -396,10 +433,14 @@
     <div class="story__slider-area">
       <div class="story__viewport">
         <div class="story__track">
-          <div class="story__slide"><a href="#" target="_blank" rel="noopener"><img src="images/pc/story01.jpg" alt="성공스토리 1"></a></div>
-          <div class="story__slide"><a href="#" target="_blank" rel="noopener"><img src="images/pc/story02.jpg" alt="성공스토리 2"></a></div>
-          <div class="story__slide"><a href="#" target="_blank" rel="noopener"><img src="images/pc/story03.jpg" alt="성공스토리 3"></a></div>
-          <div class="story__slide"><a href="#" target="_blank" rel="noopener"><img src="images/pc/story04.jpg" alt="성공스토리 4"></a></div>
+          <div class="story__slide"><a href="#" target="_blank" rel="noopener"><img src="images/pc/story01.jpg"
+                alt="성공스토리 1"></a></div>
+          <div class="story__slide"><a href="#" target="_blank" rel="noopener"><img src="images/pc/story02.jpg"
+                alt="성공스토리 2"></a></div>
+          <div class="story__slide"><a href="#" target="_blank" rel="noopener"><img src="images/pc/story03.jpg"
+                alt="성공스토리 3"></a></div>
+          <div class="story__slide"><a href="#" target="_blank" rel="noopener"><img src="images/pc/story04.jpg"
+                alt="성공스토리 4"></a></div>
         </div>
       </div>
       <button class="story__prev" aria-label="이전"><span>&#8249;</span></button>
